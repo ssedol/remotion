@@ -1,0 +1,53 @@
+{
+  "date": "2026-06-28",
+  "title": "오늘의 게임 뉴스 5",
+  "subtitle": "게임·콘솔·휴대용 게임기 주요 소식",
+  "brand": "Game Content Factory",
+  "items": [
+    {
+      "category": "STEAM",
+      "title": "예시: 스팀 할인 이슈 점검",
+      "summary": "대형 할인 시즌에 맞춰 인기 장르와 위시리스트 흐름을 빠르게 정리합니다.",
+      "point": "구매 전 할인율, 최근 평가, 업데이트 여부를 함께 확인하는 것이 핵심입니다.",
+      "sourceName": "Sample Feed",
+      "sourceUrl": "https://example.com/steam",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "category": "CONSOLE",
+      "title": "예시: 콘솔 업데이트 주요 변경",
+      "summary": "시스템 안정성, 접근성 옵션, 저장 공간 관리처럼 실제 플레이에 영향을 주는 변경점을 다룹니다.",
+      "point": "업데이트 전 패치 노트와 호환성 안내를 확인하면 불편을 줄일 수 있습니다.",
+      "sourceName": "Sample Feed",
+      "sourceUrl": "https://example.com/console",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "category": "HANDHELD",
+      "title": "예시: 휴대용 게임기 시장 흐름",
+      "summary": "배터리, 디스플레이, 발열, 가격을 중심으로 휴대용 게임기 경쟁 포인트를 정리합니다.",
+      "point": "성능만큼 휴대성과 사후 지원이 구매 판단에 중요합니다.",
+      "sourceName": "Sample Feed",
+      "sourceUrl": "https://example.com/handheld",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "category": "ESPORTS",
+      "title": "예시: 이번 주 e스포츠 관전 포인트",
+      "summary": "주요 경기 일정과 최근 메타 변화를 바탕으로 결승권 팀들의 승부 포인트를 살펴봅니다.",
+      "point": "밴픽 흐름과 초반 운영 안정성이 결과를 가를 가능성이 큽니다.",
+      "sourceName": "Sample Feed",
+      "sourceUrl": "https://example.com/esports",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "category": "INDIE",
+      "title": "예시: 인디 신작 체험판 체크",
+      "summary": "쇼케이스와 온라인 행사에서 공개된 인디 신작 중 체험판 반응이 좋은 작품을 묶어봅니다.",
+      "point": "출시 전 체험판 평가는 초기 관심도와 커뮤니티 확산에 큰 영향을 줍니다.",
+      "sourceName": "Sample Feed",
+      "sourceUrl": "https://example.com/indie",
+      "publishedAt": "2026-06-28"
+    }
+  ]
+}
