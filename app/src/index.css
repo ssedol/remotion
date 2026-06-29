@@ -169,7 +169,7 @@
 .briefing-card {
   position: relative;
   z-index: 4;
-  margin-top: 168px;
+  margin-top: 96px;
   min-height: 1240px;
   padding: 56px;
   border: 2px solid rgba(255, 255, 255, 0.16);
@@ -262,7 +262,7 @@
   position: absolute;
   left: 56px;
   right: 56px;
-  bottom: 46px;
+  bottom: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -291,7 +291,7 @@
   z-index: 4;
   left: 64px;
   right: 64px;
-  bottom: 72px;
+  bottom: 96px;
   height: 8px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);

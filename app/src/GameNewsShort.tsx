@@ -16,7 +16,7 @@ import {
 } from './newsTypes';
 
 const INTRO_SECONDS = 2;
-const NEWS_SECONDS = 5;
+const NEWS_SECONDS = 7;
 const OUTRO_SECONDS = 8;
 
 const safeText = (value: unknown, fallback: string) => {
