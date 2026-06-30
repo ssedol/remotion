@@ -1,5 +1,5 @@
 import {spawnSync} from 'node:child_process';
-import {existsSync, mkdirSync} from 'node:fs';
+import {copyFileSync, existsSync, mkdirSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -19,6 +19,10 @@ const outputPath =
 if (!existsSync(propsPath)) {
   throw new Error(`News props file not found: ${propsPath}`);
 }
+
+const bundledDataPath = resolve(projectRoot, 'data', 'news.json');
+mkdirSync(dirname(bundledDataPath), {recursive: true});
+copyFileSync(propsPath, bundledDataPath);
 
 mkdirSync(dirname(outputPath), {recursive: true});
 
