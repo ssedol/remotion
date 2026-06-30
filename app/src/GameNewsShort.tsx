@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   AbsoluteFill,
   interpolate,
@@ -50,16 +50,25 @@ const buildNewsData = (props: Partial<NewsShortData>): NewsShortData => {
   const rawItems = Array.isArray(props.items)
     ? props.items
     : defaultNewsData.items;
-  const items = rawItems.slice(0, NEWS_LIMIT);
+
+  const items = rawItems
+    .filter((item) => item && item.title && item.summary)
+    .slice(0, NEWS_LIMIT)
+    .map((item, index) => normalizeNewsItem(item, index));
+
+  const itemCount = items.length;
+  const fallbackTitle = safeText(props.title, defaultNewsData.title);
+  const dynamicTitle =
+    itemCount > 0
+      ? fallbackTitle.replace(/[0-9]+$/, String(itemCount))
+      : fallbackTitle;
 
   return {
     date: safeText(props.date, defaultNewsData.date),
-    title: safeText(props.title, defaultNewsData.title),
+    title: dynamicTitle,
     subtitle: safeText(props.subtitle, defaultNewsData.subtitle),
     brand: safeText(props.brand, defaultNewsData.brand),
-    items: Array.from({length: NEWS_LIMIT}, (_, index) =>
-      normalizeNewsItem(items[index], index),
-    ),
+    items,
   };
 };
 
@@ -263,7 +272,7 @@ export const GameNewsShort: React.FC<Partial<NewsShortData>> = (props) => {
 
   const introFrames = Math.round(INTRO_SECONDS * fps);
   const newsFrames = Math.round(NEWS_SECONDS * fps);
-  const outroStart = introFrames + NEWS_LIMIT * newsFrames;
+  const outroStart = introFrames + data.items.length * newsFrames;
 
   let scene = (
     <ClosingScreen
@@ -290,7 +299,7 @@ export const GameNewsShort: React.FC<Partial<NewsShortData>> = (props) => {
     scene = (
       <NewsCard
         data={data}
-        item={data.items[newsIndex] ?? createEmptyNewsItem(newsIndex)}
+        item={data.items[newsIndex]}
         index={newsIndex}
         frame={localFrame}
         fps={fps}
