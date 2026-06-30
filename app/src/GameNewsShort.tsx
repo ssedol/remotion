@@ -182,7 +182,7 @@ const NewsCard: React.FC<{
     >
       <Masthead
         date={data.date}
-        rightLabel={`${twoDigit(index + 1)} / ${twoDigit(NEWS_LIMIT)}`}
+        rightLabel={`${twoDigit(index + 1)} / ${twoDigit(data.items.length)}`}
       />
 
       <section
@@ -315,6 +315,3 @@ export const GameNewsShort: React.FC<Partial<NewsShortData>> = (props) => {
     </AbsoluteFill>
   );
 };
-
-export const gameNewsShortDurationSeconds =
-  INTRO_SECONDS + NEWS_LIMIT * NEWS_SECONDS + OUTRO_SECONDS;
